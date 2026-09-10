@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Glow Beauty - Account</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#c9c6c2",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#454747",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f6f3f2",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#5d5f5f",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#1c1b1b",
+                        "surface-bright": "#fcf8f8",
+                        "on-secondary-fixed": "#1c1c19",
+                        "tertiary-container": "#ffffff",
+                        "on-primary-container": "#747676",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "outline": "#747878",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-tertiary-container": "#747676",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface-container-high": "#ebe7e7",
+                        "surface-dim": "#ddd9d9",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#1a1c1c",
+                        "primary": "#5d5f5f",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#c6c6c7",
+                        "surface-variant": "#e5e2e1",
+                        "inverse-on-surface": "#f4f0ef",
+                        "surface-container": "#f1edec",
+                        "secondary-fixed": "#e5e2dd",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#444748",
+                        "on-surface": "#1c1b1b",
+                        "surface": "#fcf8f8",
+                        "tertiary-fixed": "#e2e2e2",
+                        "outline-variant": "#c4c7c8",
+                        "on-secondary-fixed-variant": "#474743",
+                        "secondary-container": "#e5e2dd",
+                        "primary-fixed": "#e2e2e2",
+                        "primary-container": "#ffffff",
+                        "secondary": "#5f5e5b",
+                        "background": "#fcf8f8",
+                        "inverse-surface": "#313030",
+                        "primary-fixed-dim": "#c6c6c7",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-secondary-container": "#656461",
+                        "tertiary": "#5d5f5f",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "section-gap": "120px",
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Bodoni Moda"],
+                        "display-lg-mobile": ["Bodoni Moda"],
+                        "body-md": ["Manrope"],
+                        "display-lg": ["Bodoni Moda"],
+                        "body-lg": ["Manrope"],
+                        "label-caps": ["Manrope"],
+                        "headline-sm": ["Bodoni Moda"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "1.3", "letterSpacing": "0.03em", "fontWeight": "400" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "0.05em", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }]
+                    }
+                },
+            },
+        }
+    </script>
+<style>
+        .whisper-shadow {
+            box-shadow: 0 10px 30px rgba(93, 95, 95, 0.04);
+        }
+        .input-underline {
+            border: none;
+            border-bottom: 1px solid #747878;
+            background-color: transparent;
+            border-radius: 0;
+        }
+        .input-underline:focus {
+            outline: none;
+            border-bottom-color: #1c1b1b;
+            box-shadow: none;
+        }
+        
+        .tab-content {
+            display: none;
+        }
+        .tab-content.active {
+            display: block;
+            animation: fadeIn 0.4s ease-in-out;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background antialiased min-h-screen flex flex-col pt-20 pb-16 md:pb-0">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface dark:bg-surface-dim border-b border-outline-variant dark:border-outline flat no shadows transition-all duration-300 ease-in-out flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20">
+<button class="text-primary dark:text-primary-fixed-dim hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">menu</span>
+</button>
+<div class="font-headline-md text-headline-md tracking-widest text-on-surface dark:text-surface-bright">
+            GLOW BEAUTY
+        </div>
+<button class="text-primary dark:text-primary-fixed-dim hover:opacity-70 transition-opacity font-label-caps text-label-caps">
+            Cart
+        </button>
+</header>
+<!-- Main Content -->
+<main class="flex-grow max-w-[1440px] mx-auto w-full px-margin-mobile md:px-margin-desktop py-section-gap flex flex-col md:flex-row gap-gutter">
+<!-- Sidebar Navigation (Desktop) -->
+<aside class="hidden md:block w-64 pr-8 border-r border-outline-variant shrink-0 h-fit sticky top-32">
+<h2 class="font-headline-sm text-headline-sm mb-8 text-on-background">Hello, Beautiful</h2>
+<nav class="flex flex-col gap-6">
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3" href="#">
+<span class="material-symbols-outlined text-[20px]">shopping_bag</span> Order History
+                </a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3" href="#">
+<span class="material-symbols-outlined text-[20px]">favorite</span> Wishlist
+                </a>
+<a class="font-body-md text-body-md text-primary font-bold flex items-center gap-3" href="#">
+<span class="material-symbols-outlined text-[20px]">person</span> Profile Settings
+                </a>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3" href="#">
+<span class="material-symbols-outlined text-[20px]">book</span> Address Book
+                </a>
+<hr class="border-outline-variant my-2 w-12"/>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-primary transition-colors flex items-center gap-3" href="#">
+<span class="material-symbols-outlined text-[20px]">logout</span> Sign Out
+                </a>
+</nav>
+</aside>
+<!-- Account Area Content -->
+<section class="flex-grow max-w-3xl md:pl-16">
+<div class="md:hidden mb-12 text-center">
+<h1 class="font-display-lg-mobile text-display-lg-mobile text-on-background">Hello, Beautiful</h1>
+</div>
+<!-- Login / Register Tabs -->
+<div class="bg-surface-container-low p-8 md:p-12 whisper-shadow rounded-[1px] relative overflow-hidden">
+<!-- Decorative subtle element -->
+<div class="absolute top-0 right-0 w-32 h-32 bg-surface-container-highest rounded-full -mr-16 -mt-16 blur-2xl opacity-50"></div>
+<div class="flex border-b border-outline-variant mb-10 relative z-10">
+<button class="flex-1 pb-4 font-label-caps text-label-caps tracking-widest text-primary border-b-2 border-primary tab-btn" data-target="login">SIGN IN</button>
+<button class="flex-1 pb-4 font-label-caps text-label-caps tracking-widest text-on-surface-variant hover:text-primary transition-colors tab-btn" data-target="register">CREATE ACCOUNT</button>
+</div>
+<!-- Login Form -->
+<div class="tab-content active relative z-10" id="login">
+<h2 class="font-headline-sm text-headline-sm mb-8">Welcome Back</h2>
+<form class="space-y-8">
+<div class="relative">
+<input class="input-underline w-full py-2 font-body-md text-body-md text-on-surface peer placeholder-transparent" id="email" placeholder="Email Address" type="email"/>
+<label class="absolute left-0 top-2 font-label-caps text-label-caps text-on-surface-variant transition-all peer-focus:-top-4 peer-focus:text-[10px] peer-valid:-top-4 peer-valid:text-[10px]" for="email">Email Address</label>
+</div>
+<div class="relative">
+<input class="input-underline w-full py-2 font-body-md text-body-md text-on-surface peer placeholder-transparent" id="password" placeholder="Password" type="password"/>
+<label class="absolute left-0 top-2 font-label-caps text-label-caps text-on-surface-variant transition-all peer-focus:-top-4 peer-focus:text-[10px] peer-valid:-top-4 peer-valid:text-[10px]" for="password">Password</label>
+</div>
+<div class="flex justify-between items-center pt-2">
+<label class="flex items-center gap-2 cursor-pointer group">
+<input class="rounded-[2px] border-outline-variant text-primary focus:ring-primary w-4 h-4 bg-transparent cursor-pointer" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface transition-colors">Remember me</span>
+</label>
+<a class="font-body-md text-body-md text-on-surface-variant hover:text-on-surface underline decoration-1 underline-offset-4 transition-colors" href="#">Forgot password?</a>
+</div>
+<button class="w-full bg-on-background text-on-primary py-4 font-label-caps text-label-caps hover:bg-secondary transition-colors mt-8 rounded-[1px]" type="button">SIGN IN</button>
+</form>
+</div>
+<!-- Register Form -->
+<div class="tab-content relative z-10" id="register">
+<h2 class="font-headline-sm text-headline-sm mb-8">Join the Glow</h2>
+<form class="space-y-8">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="relative">
+<input class="input-underline w-full py-2 font-body-md text-body-md text-on-surface peer placeholder-transparent" id="fname" placeholder="First Name" type="text"/>
+<label class="absolute left-0 top-2 font-label-caps text-label-caps text-on-surface-variant transition-all peer-focus:-top-4 peer-focus:text-[10px] peer-valid:-top-4 peer-valid:text-[10px]" for="fname">First Name</label>
+</div>
+<div class="relative">
+<input class="input-underline w-full py-2 font-body-md text-body-md text-on-surface peer placeholder-transparent" id="lname" placeholder="Last Name" type="text"/>
+<label class="absolute left-0 top-2 font-label-caps text-label-caps text-on-surface-variant transition-all peer-focus:-top-4 peer-focus:text-[10px] peer-valid:-top-4 peer-valid:text-[10px]" for="lname">Last Name</label>
+</div>
+</div>
+<div class="relative">
+<input class="input-underline w-full py-2 font-body-md text-body-md text-on-surface peer placeholder-transparent" id="reg_email" placeholder="Email Address" type="email"/>
+<label class="absolute left-0 top-2 font-label-caps text-label-caps text-on-surface-variant transition-all peer-focus:-top-4 peer-focus:text-[10px] peer-valid:-top-4 peer-valid:text-[10px]" for="reg_email">Email Address</label>
+</div>
+<div class="relative">
+<input class="input-underline w-full py-2 font-body-md text-body-md text-on-surface peer placeholder-transparent" id="reg_password" placeholder="Password" type="password"/>
+<label class="absolute left-0 top-2 font-label-caps text-label-caps text-on-surface-variant transition-all peer-focus:-top-4 peer-focus:text-[10px] peer-valid:-top-4 peer-valid:text-[10px]" for="reg_password">Password</label>
+</div>
+<div class="pt-2">
+<label class="flex items-start gap-3 cursor-pointer group">
+<input class="rounded-[2px] border-outline-variant text-primary focus:ring-primary w-4 h-4 bg-transparent cursor-pointer mt-1 shrink-0" type="checkbox"/>
+<span class="font-body-md text-body-md text-on-surface-variant group-hover:text-on-surface transition-colors leading-snug">Subscribe to email updates to hear about new product launches, exclusive offers, and beauty tips.</span>
+</label>
+</div>
+<button class="w-full bg-on-background text-on-primary py-4 font-label-caps text-label-caps hover:bg-secondary transition-colors mt-8 rounded-[1px]" type="button">CREATE ACCOUNT</button>
+</form>
+</div>
+</div>
+<!-- Imagery Section (Below forms to add life to page) -->
+<div class="mt-20 grid grid-cols-1 md:grid-cols-2 gap-8">
+<div class="bg-cover bg-center w-full h-80 rounded-[1px] whisper-shadow" data-alt="A close-up, highly detailed product shot of a sleek, minimalist frosted glass serum bottle sitting on a textured soft beige stone surface. The lighting is bright, natural, and directional, casting long elegant shadows, evoking a premium light-mode luxury aesthetic. Soft pink flower petals are subtly out of focus in the foreground." style="background-image: url('https://lh3.googleusercontent.com/aida-public/AB6AXuDdXmAUM2GABtO06NwFKhFdrjCxUABXBcdC8JF4satKdCJrax-bKoDNr-c__eUrWT3k41jgxpbhMSbSqoMZ4aZC1zNsFbBf4yI-9px-fo-ynPhL1sm45dw-ipRTW5cSl_1MMYvsYAWPb6qvoZdVF01QgeT9J1f79edQem-zJ-LP7nelZEfJrWBRCxkHJaqFRoNusaIx6Job-vF5E6j_up0EwRzxYoRlUmnHbxdcxMD6EzhcqO0Q6Ad9fw')"></div>
+<div class="flex flex-col justify-center bg-surface-container-low p-8 whisper-shadow rounded-[1px]">
+<h3 class="font-headline-sm text-headline-sm mb-4">Glow Rewards</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-8">Earn points on every purchase, unlock exclusive gifts, and enjoy early access to our newest curations.</p>
+<a class="font-label-caps text-label-caps border border-on-background px-6 py-3 w-fit hover:bg-on-background hover:text-surface transition-colors" href="#">DISCOVER MORE</a>
+</div>
+</div>
+</section>
+</main>
+<!-- BottomNavBar (Mobile) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center h-16 bg-surface dark:bg-surface-container-lowest border-t border-outline-variant dark:border-outline flat no shadows z-50">
+<a class="flex flex-col items-center justify-center text-on-secondary-container dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">storefront</span>
+<span class="font-label-caps text-label-caps mt-1 text-[10px]">Shop</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">favorite</span>
+<span class="font-label-caps text-label-caps mt-1 text-[10px]">Wishlist</span>
+</a>
+<a class="flex flex-col items-center justify-center text-primary dark:text-primary-fixed-dim font-bold hover:text-primary dark:hover:text-primary-fixed scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">person</span>
+<span class="font-label-caps text-label-caps mt-1 text-[10px]">Account</span>
+</a>
+<a class="flex flex-col items-center justify-center text-on-secondary-container dark:text-on-secondary-fixed-variant hover:text-primary dark:hover:text-primary-fixed scale-95 active:scale-90 transition-transform" href="#">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 0;">shopping_bag</span>
+<span class="font-label-caps text-label-caps mt-1 text-[10px]">Cart</span>
+</a>
+</nav>
+<!-- Footer -->
+<footer class="w-full mt-section-gap bg-surface-container-low dark:bg-surface-container-highest flex flex-col items-center py-16 px-margin-mobile md:px-margin-desktop flat no shadows mb-16 md:mb-0">
+<div class="font-headline-sm text-headline-sm mb-4 text-on-background">
+            GLOW BEAUTY
+        </div>
+<nav class="flex flex-wrap justify-center gap-6 mb-8">
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed hover:underline transition-all" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed hover:underline transition-all" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed hover:underline transition-all" href="#">Shipping &amp; Returns</a>
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed hover:underline transition-all" href="#">Instagram</a>
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed hover:underline transition-all" href="#">Contact Us</a>
+</nav>
+<div class="font-body-md text-body-md text-secondary dark:text-secondary-fixed text-center">
+            © 2024 GLOW BEAUTY. ALL RIGHTS RESERVED.
+        </div>
+</footer>
+<script>
+        // Simple tab switching logic
+        document.querySelectorAll('.tab-btn').forEach(btn => {
+            btn.addEventListener('click', () => {
+                // Remove active styling from all tabs
+                document.querySelectorAll('.tab-btn').forEach(b => {
+                    b.classList.remove('text-primary', 'border-b-2', 'border-primary');
+                    b.classList.add('text-on-surface-variant');
+                });
+                // Add active styling to clicked tab
+                btn.classList.add('text-primary', 'border-b-2', 'border-primary');
+                btn.classList.remove('text-on-surface-variant');
+
+                // Hide all content
+                document.querySelectorAll('.tab-content').forEach(c => c.classList.remove('active'));
+                
+                // Show target content
+                const target = btn.getAttribute('data-target');
+                document.getElementById(target).classList.add('active');
+            });
+        });
+
+        // Floating label logic initialization if inputs are pre-filled by browser
+        document.querySelectorAll('input').forEach(input => {
+            if(input.value !== '') {
+                input.classList.add('valid'); // Just relying on CSS :valid pseudo class might be tricky with empty state placeholder hack, so we just use standard html5 valid or focus within css. The placeholder-transparent and peer-focus classes handle this mostly in CSS.
+            }
+        });
+    </script>
+</body></html>

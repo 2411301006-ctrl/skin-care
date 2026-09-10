@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Luminous Silk Foundation - GLOW BEAUTY</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#c9c6c2",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#454747",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f6f3f2",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#5d5f5f",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#1c1b1b",
+                        "surface-bright": "#fcf8f8",
+                        "on-secondary-fixed": "#1c1c19",
+                        "tertiary-container": "#ffffff",
+                        "on-primary-container": "#747676",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "outline": "#747878",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-tertiary-container": "#747676",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface-container-high": "#ebe7e7",
+                        "surface-dim": "#ddd9d9",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#1a1c1c",
+                        "primary": "#5d5f5f",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#c6c6c7",
+                        "surface-variant": "#e5e2e1",
+                        "inverse-on-surface": "#f4f0ef",
+                        "surface-container": "#f1edec",
+                        "secondary-fixed": "#e5e2dd",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#444748",
+                        "on-surface": "#1c1b1b",
+                        "surface": "#fcf8f8",
+                        "tertiary-fixed": "#e2e2e2",
+                        "outline-variant": "#c4c7c8",
+                        "on-secondary-fixed-variant": "#474743",
+                        "secondary-container": "#e5e2dd",
+                        "primary-fixed": "#e2e2e2",
+                        "primary-container": "#ffffff",
+                        "secondary": "#5f5e5b",
+                        "background": "#fcf8f8",
+                        "inverse-surface": "#313030",
+                        "primary-fixed-dim": "#c6c6c7",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-secondary-container": "#656461",
+                        "tertiary": "#5d5f5f",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "section-gap": "120px",
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Bodoni Moda", "serif"],
+                        "display-lg-mobile": ["Bodoni Moda", "serif"],
+                        "body-md": ["Manrope", "sans-serif"],
+                        "display-lg": ["Bodoni Moda", "serif"],
+                        "body-lg": ["Manrope", "sans-serif"],
+                        "label-caps": ["Manrope", "sans-serif"],
+                        "headline-sm": ["Bodoni Moda", "serif"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "1.3", "letterSpacing": "0.03em", "fontWeight": "400" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "0.05em", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        body { background-color: #fcf8f8; }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="font-body-md text-body-md text-on-background antialiased bg-background pb-16 md:pb-0">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface dark:bg-surface-dim border-b border-outline-variant dark:border-outline flat no shadows transition-all duration-300 ease-in-out">
+<div class="flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20">
+<button class="text-on-surface-variant dark:text-on-surface-variant hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<div class="font-headline-md text-headline-md tracking-widest text-on-surface dark:text-surface-bright">GLOW BEAUTY</div>
+<button class="text-on-surface-variant dark:text-on-surface-variant hover:opacity-70 transition-opacity font-label-caps text-label-caps uppercase">Cart</button>
+</div>
+</header>
+<main class="pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto">
+<!-- Product Hero Section -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter mb-section-gap">
+<!-- Gallery -->
+<div class="md:col-span-7 flex flex-col md:flex-row-reverse gap-4">
+<div class="w-full h-[500px] md:h-[700px] bg-surface-container-low rounded flex items-center justify-center relative overflow-hidden">
+<img alt="Luminous Silk Foundation" class="w-full h-full object-cover mix-blend-multiply" data-alt="A luxurious, minimalist close-up of a premium glass foundation bottle named Luminous Silk Foundation. The bottle sits on a soft beige marble surface, bathed in warm, diffused natural lighting that highlights its elegant frosted glass texture and subtle gold cap. The background is a clean, ethereal soft beige studio setting, emphasizing a high-end, editorial beauty aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAwH2nGbRBEgtZKG8O1WG_-kd0lxgoQtrxAR3DRTqCPbKP1IQHHRowlxGMkeNc0Ixh0ohHIsn533RY7-nknxZkw0UvGdSkbSF9OOTidnQxMNqk3vraCtk_XwVO9TuURArWMAhG3MC6m_fuqYOJTf4wdFyPk0cbKneOVQuaAt2LOQ8sphEnczyyX61Uk9DO_3O_1k3sHwPHvBDNDG4o2nQG5artpz87omAHfrOkxN7F06FA6VJXrnDMv3w"/>
+</div>
+<div class="flex flex-row md:flex-col gap-4 overflow-x-auto md:overflow-x-visible hide-scrollbar w-full md:w-24 shrink-0">
+<button class="w-20 h-24 md:w-24 md:h-32 bg-surface-container-low rounded flex-shrink-0 border border-outline-variant">
+<img alt="Detail 1" class="w-full h-full object-cover mix-blend-multiply" data-alt="A minimalist close-up detail shot of the foundation bottle's gold pump dispenser and frosted glass neck. Soft beige studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAZTp1sh6kl07GYSlCDWTKnRCQ0xi5T39o3dLfUNqHkEb6jH3MCjy35JxpTh6y3LV8VGyH8YAicSohCDFE4WF_oxQHDL9wi6AeHgT2viGg6RBzx62_bvStzOGbpkQ7Jo4l2Rcm_3DI3Iqt6KVkFTdufBEBk8hfqYeg0I11czHdEHb2T-5WR5VxxJCC2QMu9xoYngyBC7xcZGeeCtUBDrWK_pSeUgTo5ByRaugPOy-w7zdZb1KdTYP2gqQ"/>
+</button>
+<button class="w-20 h-24 md:w-24 md:h-32 bg-surface-container-low rounded flex-shrink-0 opacity-60 hover:opacity-100 transition-opacity">
+<img alt="Texture" class="w-full h-full object-cover mix-blend-multiply" data-alt="A macro shot of a creamy, luminous foundation swatch smeared elegantly on a clean white surface, showing rich texture and blendability." src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8CwhPUptNsiaAHP7ZaKDdRovMurkhoG0f5GBADLaQE-jmaT3-SUCUA6ENgs4qdqYJVhCrVdJQ8KWpUEnBTOHhJkuUBkWMQKcMgfpdbrP0rXe7_CHq7lcu1WpwTgLbtWfdf7mfdJJFc9T8hyuDKuTHMeHL01n1ExqLvVXyfEdm8YAOWjQ4i_bzmzQ49LNs83CRL_LWe3nfwzkDmIbQp4kni4A1NbLYSQz1zZue1NbV2BUkeibSISuo1A"/>
+</button>
+<button class="w-20 h-24 md:w-24 md:h-32 bg-surface-container-low rounded flex-shrink-0 opacity-60 hover:opacity-100 transition-opacity">
+<img alt="Model" class="w-full h-full object-cover mix-blend-multiply" data-alt="A lifestyle shot of a diverse model with glowing, flawless skin looking confidently into the camera, representing the foundation's finish. Soft studio lighting." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBaIOrBIhGqgo6VyJS5Ki8PCFINvhcU_aDalerJtTRWWfPnFE3u1eXhol2yFmr17T7WVOmHyEorx3KER_PXMPfN9wZ9_247ASUiQes6cC8nrbhuU1WWHb3bVcqKNDyMlWtk1PToM_iiJCYlD2atxN7dD3IVeX5Hh9KdDjx2aiodtMakByT1Caa78MDnZKbuNiRGcFb1k5Es-E2sTSRL3PDsFO2wbldHE5vsm2wff2QuYBE_uy0YonvmpQ"/>
+</button>
+</div>
+</div>
+<!-- Details & Actions -->
+<div class="md:col-span-5 flex flex-col justify-center pt-8 md:pt-0 md:pl-8">
+<div class="mb-6">
+<h1 class="font-display-lg-mobile md:font-display-lg text-display-lg-mobile md:text-display-lg text-on-surface mb-2">Luminous Silk Foundation</h1>
+<div class="flex items-center gap-2 mb-4">
+<div class="flex text-on-surface">
+<span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined text-[16px]" data-icon="star_half" data-weight="fill" style="font-variation-settings: 'FILL' 1;">star_half</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant">4.8 (124 Reviews)</span>
+</div>
+<p class="font-headline-sm text-headline-sm text-on-surface">$64.00</p>
+</div>
+<div class="mb-8">
+<p class="font-body-lg text-body-lg text-on-surface-variant mb-6">Award-winning liquid foundation that delivers buildable medium coverage and a luminous, glowy-skin finish for a natural makeup look.</p>
+</div>
+<!-- Swatches -->
+<div class="mb-8">
+<div class="flex justify-between items-center mb-4">
+<span class="font-label-caps text-label-caps text-on-surface uppercase">Shade: <span class="font-normal">4 - Light, Golden</span></span>
+<button class="font-label-caps text-label-caps text-on-surface-variant hover:text-on-surface underline">Find Your Shade</button>
+</div>
+<div class="flex flex-wrap gap-3">
+<button class="w-10 h-10 rounded-full bg-[#f4e1d2] border border-outline-variant hover:border-on-surface transition-colors focus:outline-none"></button>
+<button class="w-10 h-10 rounded-full bg-[#ebd1be] border border-outline-variant hover:border-on-surface transition-colors focus:outline-none"></button>
+<button class="w-10 h-10 rounded-full bg-[#dfc0ab] border-2 border-on-surface focus:outline-none relative">
+<span class="absolute inset-0 m-auto w-1.5 h-1.5 rounded-full bg-on-surface"></span>
+</button>
+<button class="w-10 h-10 rounded-full bg-[#d2a58b] border border-outline-variant hover:border-on-surface transition-colors focus:outline-none"></button>
+<button class="w-10 h-10 rounded-full bg-[#ba8665] border border-outline-variant hover:border-on-surface transition-colors focus:outline-none"></button>
+<button class="w-10 h-10 rounded-full bg-[#965a38] border border-outline-variant hover:border-on-surface transition-colors focus:outline-none"></button>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex items-end gap-4 mb-8">
+<div class="w-24">
+<label class="block font-label-caps text-label-caps text-on-surface-variant uppercase mb-2">Qty</label>
+<div class="flex items-center justify-between border-b border-outline-variant pb-2">
+<button class="text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-[18px]" data-icon="remove">remove</span></button>
+<span class="font-body-md text-body-md">1</span>
+<button class="text-on-surface hover:text-primary transition-colors"><span class="material-symbols-outlined text-[18px]" data-icon="add">add</span></button>
+</div>
+</div>
+<button class="flex-1 bg-on-surface text-on-primary font-label-caps text-label-caps uppercase h-12 flex items-center justify-center hover:bg-surface-tint transition-colors">
+                        Add to Bag - $64.00
+                    </button>
+</div>
+<div class="flex items-center gap-2 text-on-surface-variant font-body-md text-body-md border border-outline-variant p-4 rounded-sm">
+<span class="material-symbols-outlined" data-icon="local_shipping">local_shipping</span>
+<span>Complimentary standard shipping on all orders.</span>
+</div>
+</div>
+</div>
+<!-- Product Info Tabs -->
+<div class="mb-section-gap border-t border-outline-variant pt-8">
+<div class="flex gap-8 mb-8 border-b border-outline-variant">
+<button class="font-label-caps text-label-caps uppercase pb-4 border-b-2 border-on-surface text-on-surface">Description</button>
+<button class="font-label-caps text-label-caps uppercase pb-4 border-b-2 border-transparent text-on-surface-variant hover:text-on-surface transition-colors">Ingredients</button>
+<button class="font-label-caps text-label-caps uppercase pb-4 border-b-2 border-transparent text-on-surface-variant hover:text-on-surface transition-colors">How to Use</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 gap-gutter">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-4">Micro-fil™ Technology</h3>
+<p class="font-body-md text-body-md text-on-surface-variant mb-4">Formulated with Micro-fil™ technology, this liquid foundation produces a low-density product that pairs high-impact pigments with weightless texture.</p>
+<p class="font-body-md text-body-md text-on-surface-variant">The oil-free, hydrating foundation glides seamlessly onto the skin, providing a silky texture and a natural, lit-from-within glow that blurs imperfections.</p>
+</div>
+<div class="bg-surface-container-low p-8 rounded-sm">
+<ul class="space-y-4">
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-outline mt-0.5 text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface">Oil-free formula suitable for all skin types</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-outline mt-0.5 text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface">Buildable medium coverage</span>
+</li>
+<li class="flex items-start gap-3">
+<span class="material-symbols-outlined text-outline mt-0.5 text-[18px]" data-icon="check_circle">check_circle</span>
+<span class="font-body-md text-body-md text-on-surface">Radiant, luminous finish</span>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile only, hidden on desktop for details page usually, but keeping as per shell mandate if applicable, suppressing as details page is a focus screen) -->
+<!-- Suppressed BottomNavBar as this is a Product Details page, a focused journey. -->
+<!-- Footer -->
+<footer class="w-full mt-section-gap bg-surface-container-low dark:bg-surface-container-highest flat no shadows flex flex-col items-center py-16 px-margin-mobile md:px-margin-desktop">
+<div class="font-headline-sm text-headline-sm mb-4 text-on-surface">GLOW BEAUTY</div>
+<div class="flex flex-wrap justify-center gap-6 mb-8">
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed hover:underline transition-all" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed hover:underline transition-all" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed hover:underline transition-all" href="#">Shipping &amp; Returns</a>
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed hover:underline transition-all" href="#">Instagram</a>
+<a class="font-body-md text-body-md text-secondary dark:text-secondary-fixed hover:underline transition-all" href="#">Contact Us</a>
+</div>
+<p class="font-body-md text-body-md text-secondary dark:text-secondary-fixed">© 2024 GLOW BEAUTY. ALL RIGHTS RESERVED.</p>
+</footer>
+</body></html>

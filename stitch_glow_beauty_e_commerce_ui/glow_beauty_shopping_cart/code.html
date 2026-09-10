@@ -1,0 +1,252 @@
+<!DOCTYPE html>
+
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Cart - GLOW BEAUTY</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed-dim": "#c9c6c2",
+                      "on-error": "#ffffff",
+                      "on-primary-fixed-variant": "#454747",
+                      "on-primary": "#ffffff",
+                      "surface-container-low": "#f6f3f2",
+                      "on-tertiary": "#ffffff",
+                      "surface-tint": "#5d5f5f",
+                      "on-secondary": "#ffffff",
+                      "on-background": "#1c1b1b",
+                      "surface-bright": "#fcf8f8",
+                      "on-secondary-fixed": "#1c1c19",
+                      "tertiary-container": "#ffffff",
+                      "on-primary-container": "#747676",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "outline": "#747878",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "on-tertiary-container": "#747676",
+                      "surface-container-highest": "#e5e2e1",
+                      "surface-container-high": "#ebe7e7",
+                      "surface-dim": "#ddd9d9",
+                      "error": "#ba1a1a",
+                      "on-primary-fixed": "#1a1c1c",
+                      "primary": "#5d5f5f",
+                      "on-error-container": "#93000a",
+                      "inverse-primary": "#c6c6c7",
+                      "surface-variant": "#e5e2e1",
+                      "inverse-on-surface": "#f4f0ef",
+                      "surface-container": "#f1edec",
+                      "secondary-fixed": "#e5e2dd",
+                      "surface-container-lowest": "#ffffff",
+                      "on-surface-variant": "#444748",
+                      "on-surface": "#1c1b1b",
+                      "surface": "#fcf8f8",
+                      "tertiary-fixed": "#e2e2e2",
+                      "outline-variant": "#c4c7c8",
+                      "on-secondary-fixed-variant": "#474743",
+                      "secondary-container": "#e5e2dd",
+                      "primary-fixed": "#e2e2e2",
+                      "primary-container": "#ffffff",
+                      "secondary": "#5f5e5b",
+                      "background": "#fcf8f8",
+                      "inverse-surface": "#313030",
+                      "primary-fixed-dim": "#c6c6c7",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "on-secondary-container": "#656461",
+                      "tertiary": "#5d5f5f",
+                      "error-container": "#ffdad6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "section-gap": "120px",
+                      "margin-mobile": "20px",
+                      "unit": "8px",
+                      "margin-desktop": "64px",
+                      "container-max": "1440px"
+              },
+              "fontFamily": {
+                      "headline-md": ["Bodoni Moda"],
+                      "display-lg-mobile": ["Bodoni Moda"],
+                      "body-md": ["Manrope"],
+                      "display-lg": ["Bodoni Moda"],
+                      "body-lg": ["Manrope"],
+                      "label-caps": ["Manrope"],
+                      "headline-sm": ["Bodoni Moda"]
+              },
+              "fontSize": {
+                      "headline-md": ["32px", {"lineHeight": "1.3", "letterSpacing": "0.03em", "fontWeight": "400"}],
+                      "display-lg-mobile": ["40px", {"lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "400"}],
+                      "body-md": ["16px", {"lineHeight": "1.5", "fontWeight": "400"}],
+                      "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "0.05em", "fontWeight": "400"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "label-caps": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600"}],
+                      "headline-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "500"}]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+        .whisper-shadow {
+            box-shadow: 0 10px 40px -10px rgba(28, 27, 27, 0.04);
+        }
+    </style>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-surface text-on-surface antialiased min-h-screen flex flex-col font-body-md text-body-md">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface border-b border-outline-variant flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 transition-all duration-300 ease-in-out">
+<button class="text-on-surface hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+<div class="font-headline-md text-headline-md tracking-widest text-on-surface">
+            GLOW BEAUTY
+        </div>
+<button class="font-label-caps text-label-caps text-on-surface hover:opacity-70 transition-opacity flex items-center gap-2">
+            Cart
+            <span class="material-symbols-outlined text-[18px]">shopping_bag</span>
+</button>
+</header>
+<!-- Main Content -->
+<main class="flex-grow pt-32 pb-section-gap px-margin-mobile md:px-margin-desktop max-w-container-max mx-auto w-full">
+<h1 class="font-display-lg-mobile text-display-lg-mobile md:font-display-lg md:text-display-lg mb-16 text-center">Your Cart</h1>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-gutter">
+<!-- Cart Items List (Left Column) -->
+<div class="md:col-span-8 flex flex-col gap-8">
+<!-- Item 1 -->
+<div class="flex flex-col sm:flex-row gap-6 p-6 bg-surface-container-low rounded-DEFAULT items-start sm:items-center">
+<img class="w-24 h-32 object-cover object-center bg-surface-container-highest" data-alt="A minimalist flat lay photograph of a luxurious glowing skin serum in a frosted glass dropper bottle. The background is a soft beige surface with subtle, natural dappled sunlight casting elegant shadows. High-end beauty editorial aesthetic with a sophisticated and serene mood." src="https://lh3.googleusercontent.com/aida-public/AB6AXuATg95IXmzms-WImvLg90etY47bZmJzbc6BfGol8U3WCuBE9TsU588bzQ8KT2HMhz7NMfqiSor96PEcX-8xaZbNwosxNRAnDHLI3MKPsN6iPYO7bEE6D1aCwIchCW44YXaTLJc6FQxrkii95UCX8LlAqNp-fNOJJxjNaJkQBFlfhsNEewF7BIzcdwUYZV3kOx13H0D1yQ9WlhpHM19-MSqLOGPBssm6arAS_PB1a8_aXsOuAXQL-15jpg"/>
+<div class="flex-grow flex flex-col gap-2">
+<div class="flex justify-between items-start w-full">
+<div>
+<h3 class="font-headline-sm text-headline-sm">Radiance Renewal Serum</h3>
+<p class="text-on-surface-variant mt-1 text-sm">30ml / 1 fl oz</p>
+</div>
+<p class="font-body-lg text-body-lg font-medium">$85.00</p>
+</div>
+<div class="flex justify-between items-center w-full mt-4">
+<div class="flex items-center border border-outline-variant rounded-DEFAULT overflow-hidden h-10 w-28">
+<button class="flex-1 flex items-center justify-center hover:bg-surface-variant transition-colors"><span class="material-symbols-outlined text-[16px]">remove</span></button>
+<span class="flex-1 text-center font-label-caps text-label-caps">1</span>
+<button class="flex-1 flex items-center justify-center hover:bg-surface-variant transition-colors"><span class="material-symbols-outlined text-[16px]">add</span></button>
+</div>
+<button class="text-on-surface-variant hover:text-error transition-colors flex items-center gap-1 group">
+<span class="font-label-caps text-label-caps opacity-0 group-hover:opacity-100 transition-opacity">Remove</span>
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="flex flex-col sm:flex-row gap-6 p-6 bg-surface-container-low rounded-DEFAULT items-start sm:items-center">
+<img class="w-24 h-32 object-cover object-center bg-surface-container-highest" data-alt="A beautifully styled photograph of a minimalist matte lipstick in a chic rose gold tube, lying next to a subtle swatch of soft pink color on a pristine white marble texture. High-end luxury beauty aesthetic with bright, airy lighting and sharp focus." src="https://lh3.googleusercontent.com/aida-public/AB6AXuBiDp_4pY52VCk5SXVxXEn7hWt5ecJPUO2Xtdjt3_-qI8IXFHkAA1uhTzSh5cz5jyD7H9l0tOyvKbAoAw-PRWH4Y6EzazQYzytj244fkGx7TM040nswBjkeKV3-0seDzrP1kdGnGmCJtenPs8Ypp5fgGMMhH7Gyr_Awh9-IhSCnxlddU0lcBgQ9opl4_X9TBpYuijaAp1AW3QtF_k9qxMO_oiArVucr6xt8o0BQhcBlOJM-FPB5PgeQ0Q"/>
+<div class="flex-grow flex flex-col gap-2">
+<div class="flex justify-between items-start w-full">
+<div>
+<h3 class="font-headline-sm text-headline-sm">Velvet Matte Lip Color</h3>
+<p class="text-on-surface-variant mt-1 text-sm">Dusty Rose</p>
+</div>
+<p class="font-body-lg text-body-lg font-medium">$38.00</p>
+</div>
+<div class="flex justify-between items-center w-full mt-4">
+<div class="flex items-center border border-outline-variant rounded-DEFAULT overflow-hidden h-10 w-28">
+<button class="flex-1 flex items-center justify-center hover:bg-surface-variant transition-colors"><span class="material-symbols-outlined text-[16px]">remove</span></button>
+<span class="flex-1 text-center font-label-caps text-label-caps">2</span>
+<button class="flex-1 flex items-center justify-center hover:bg-surface-variant transition-colors"><span class="material-symbols-outlined text-[16px]">add</span></button>
+</div>
+<button class="text-on-surface-variant hover:text-error transition-colors flex items-center gap-1 group">
+<span class="font-label-caps text-label-caps opacity-0 group-hover:opacity-100 transition-opacity">Remove</span>
+<span class="material-symbols-outlined" data-icon="close">close</span>
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- Summary Section (Right Column) -->
+<div class="md:col-span-4 mt-12 md:mt-0">
+<div class="bg-surface p-8 border border-outline-variant rounded-DEFAULT whisper-shadow sticky top-32">
+<h2 class="font-headline-sm text-headline-sm mb-6 border-b border-outline-variant pb-4">Order Summary</h2>
+<div class="flex flex-col gap-4 mb-8">
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant">Subtotal</span>
+<span class="font-medium">$161.00</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant">Estimated Shipping</span>
+<span class="font-medium">Calculated at checkout</span>
+</div>
+<div class="flex justify-between items-center">
+<span class="text-on-surface-variant">Taxes</span>
+<span class="font-medium">$0.00</span>
+</div>
+</div>
+<div class="border-t border-outline-variant pt-6 mb-8">
+<div class="flex justify-between items-center">
+<span class="font-headline-sm text-headline-sm">Total</span>
+<span class="font-headline-sm text-headline-sm">$161.00</span>
+</div>
+</div>
+<div class="mb-8">
+<label class="font-label-caps text-label-caps text-on-surface-variant block mb-2" for="promo">Promo Code</label>
+<div class="flex gap-2">
+<input class="flex-grow bg-transparent border-0 border-b border-outline-variant focus:border-on-surface focus:ring-0 px-0 py-2 font-body-md text-body-md text-on-surface placeholder-outline transition-colors" id="promo" placeholder="Enter code" type="text"/>
+<button class="font-label-caps text-label-caps text-on-surface hover:opacity-70 transition-opacity border-b border-on-surface pb-1 self-end">Apply</button>
+</div>
+</div>
+<button class="w-full bg-on-surface text-surface py-4 font-label-caps text-label-caps hover:bg-inverse-surface transition-colors rounded-DEFAULT">
+                        PROCEED TO CHECKOUT
+                    </button>
+</div>
+</div>
+</div>
+</main>
+<!-- BottomNavBar (Mobile Only) -->
+<nav class="md:hidden fixed bottom-0 left-0 w-full flex justify-around items-center h-16 bg-surface border-t border-outline-variant z-50 pb-safe">
+<button class="flex flex-col items-center justify-center text-on-secondary-container hover:text-primary transition-transform scale-95 active:scale-90 w-16">
+<span class="material-symbols-outlined mb-1" data-icon="storefront">storefront</span>
+<span class="font-label-caps text-label-caps text-[10px]">Shop</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-secondary-container hover:text-primary transition-transform scale-95 active:scale-90 w-16">
+<span class="material-symbols-outlined mb-1" data-icon="favorite">favorite</span>
+<span class="font-label-caps text-label-caps text-[10px]">Wishlist</span>
+</button>
+<button class="flex flex-col items-center justify-center text-on-secondary-container hover:text-primary transition-transform scale-95 active:scale-90 w-16">
+<span class="material-symbols-outlined mb-1" data-icon="person">person</span>
+<span class="font-label-caps text-label-caps text-[10px]">Account</span>
+</button>
+<button class="flex flex-col items-center justify-center text-primary font-bold transition-transform scale-95 active:scale-90 w-16">
+<span class="material-symbols-outlined mb-1" data-icon="shopping_bag" data-weight="fill" style="font-variation-settings: 'FILL' 1;">shopping_bag</span>
+<span class="font-label-caps text-label-caps text-[10px]">Cart</span>
+</button>
+</nav>
+<!-- Footer -->
+<footer class="w-full mt-section-gap flex flex-col items-center py-16 px-margin-mobile md:px-margin-desktop bg-surface-container-low mb-16 md:mb-0">
+<div class="font-headline-sm text-headline-sm mb-4 text-on-surface">GLOW BEAUTY</div>
+<div class="flex flex-wrap justify-center gap-6 mb-8 font-body-md text-body-md">
+<a class="text-secondary hover:underline transition-all" href="#">Privacy Policy</a>
+<a class="text-secondary hover:underline transition-all" href="#">Terms of Service</a>
+<a class="text-secondary hover:underline transition-all" href="#">Shipping &amp; Returns</a>
+<a class="text-secondary hover:underline transition-all" href="#">Instagram</a>
+<a class="text-secondary hover:underline transition-all" href="#">Contact Us</a>
+</div>
+<div class="text-secondary font-label-caps text-label-caps text-center">
+            © 2024 GLOW BEAUTY. ALL RIGHTS RESERVED.
+        </div>
+</footer>
+</body></html>

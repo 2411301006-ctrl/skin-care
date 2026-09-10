@@ -1,0 +1,377 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Glow Beauty - Checkout</title>
+<!-- Material Symbols -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Google Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "secondary-fixed-dim": "#c9c6c2",
+                      "on-error": "#ffffff",
+                      "on-primary-fixed-variant": "#454747",
+                      "on-primary": "#ffffff",
+                      "surface-container-low": "#f6f3f2",
+                      "on-tertiary": "#ffffff",
+                      "surface-tint": "#5d5f5f",
+                      "on-secondary": "#ffffff",
+                      "on-background": "#1c1b1b",
+                      "surface-bright": "#fcf8f8",
+                      "on-secondary-fixed": "#1c1c19",
+                      "tertiary-container": "#ffffff",
+                      "on-primary-container": "#747676",
+                      "on-tertiary-fixed-variant": "#454747",
+                      "outline": "#747878",
+                      "tertiary-fixed-dim": "#c6c6c7",
+                      "on-tertiary-container": "#747676",
+                      "surface-container-highest": "#e5e2e1",
+                      "surface-container-high": "#ebe7e7",
+                      "surface-dim": "#ddd9d9",
+                      "error": "#ba1a1a",
+                      "on-primary-fixed": "#1a1c1c",
+                      "primary": "#5d5f5f",
+                      "on-error-container": "#93000a",
+                      "inverse-primary": "#c6c6c7",
+                      "surface-variant": "#e5e2e1",
+                      "inverse-on-surface": "#f4f0ef",
+                      "surface-container": "#f1edec",
+                      "secondary-fixed": "#e5e2dd",
+                      "surface-container-lowest": "#ffffff",
+                      "on-surface-variant": "#444748",
+                      "on-surface": "#1c1b1b",
+                      "surface": "#fcf8f8",
+                      "tertiary-fixed": "#e2e2e2",
+                      "outline-variant": "#c4c7c8",
+                      "on-secondary-fixed-variant": "#474743",
+                      "secondary-container": "#e5e2dd",
+                      "primary-fixed": "#e2e2e2",
+                      "primary-container": "#ffffff",
+                      "secondary": "#5f5e5b",
+                      "background": "#fcf8f8",
+                      "inverse-surface": "#313030",
+                      "primary-fixed-dim": "#c6c6c7",
+                      "on-tertiary-fixed": "#1a1c1c",
+                      "on-secondary-container": "#656461",
+                      "tertiary": "#5d5f5f",
+                      "error-container": "#ffdad6"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.125rem",
+                      "lg": "0.25rem",
+                      "xl": "0.5rem",
+                      "full": "0.75rem"
+              },
+              "spacing": {
+                      "gutter": "24px",
+                      "section-gap": "120px",
+                      "margin-mobile": "20px",
+                      "unit": "8px",
+                      "margin-desktop": "64px",
+                      "container-max": "1440px"
+              },
+              "fontFamily": {
+                      "headline-md": [
+                              "Bodoni Moda"
+                      ],
+                      "display-lg-mobile": [
+                              "Bodoni Moda"
+                      ],
+                      "body-md": [
+                              "Manrope"
+                      ],
+                      "display-lg": [
+                              "Bodoni Moda"
+                      ],
+                      "body-lg": [
+                              "Manrope"
+                      ],
+                      "label-caps": [
+                              "Manrope"
+                      ],
+                      "headline-sm": [
+                              "Bodoni Moda"
+                      ]
+              },
+              "fontSize": {
+                      "headline-md": [
+                              "32px",
+                              {
+                                      "lineHeight": "1.3",
+                                      "letterSpacing": "0.03em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg-mobile": [
+                              "40px",
+                              {
+                                      "lineHeight": "1.2",
+                                      "letterSpacing": "0.02em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-md": [
+                              "16px",
+                              {
+                                      "lineHeight": "1.5",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "display-lg": [
+                              "64px",
+                              {
+                                      "lineHeight": "1.1",
+                                      "letterSpacing": "0.05em",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "body-lg": [
+                              "18px",
+                              {
+                                      "lineHeight": "1.6",
+                                      "fontWeight": "400"
+                              }
+                      ],
+                      "label-caps": [
+                              "12px",
+                              {
+                                      "lineHeight": "1",
+                                      "letterSpacing": "0.1em",
+                                      "fontWeight": "600"
+                              }
+                      ],
+                      "headline-sm": [
+                              "24px",
+                              {
+                                      "lineHeight": "1.4",
+                                      "fontWeight": "500"
+                              }
+                      ]
+              }
+            }
+          }
+        }
+    </script>
+<style>
+    body {
+      min-height: max(884px, 100dvh);
+    }
+  </style>
+  </head>
+<body class="bg-background text-on-background font-body-md text-body-md antialiased pt-20">
+<!-- TopAppBar Header (Suppressed active states due to transactional flow, keeping brand anchor) -->
+<header class="fixed top-0 w-full z-50 bg-surface border-b border-outline-variant flex justify-between items-center px-margin-mobile md:px-margin-desktop h-20 transition-all duration-300 ease-in-out">
+<div class="flex items-center gap-4 cursor-pointer hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined text-primary" data-icon="arrow_back">arrow_back</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant hidden md:block uppercase">Return to Cart</span>
+</div>
+<div class="font-headline-md text-headline-md tracking-widest text-on-surface">
+            GLOW BEAUTY
+        </div>
+<div class="flex items-center gap-4">
+<span class="material-symbols-outlined text-on-surface-variant hover:opacity-70 transition-opacity cursor-pointer" data-icon="lock">lock</span>
+<span class="font-label-caps text-label-caps text-on-surface-variant hidden md:block">Secure Checkout</span>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-12 md:py-24">
+<!-- Progress Indicator -->
+<div class="mb-16 md:mb-24 flex justify-center items-center w-full max-w-2xl mx-auto">
+<div class="flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-caps text-label-caps mb-2">1</div>
+<span class="font-label-caps text-label-caps text-primary tracking-widest uppercase">Shipping</span>
+</div>
+<div class="flex-1 h-px bg-outline-variant mx-4 mt-[-24px]"></div>
+<div class="flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-label-caps text-label-caps mb-2 border border-outline-variant">2</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase">Payment</span>
+</div>
+<div class="flex-1 h-px bg-outline-variant mx-4 mt-[-24px]"></div>
+<div class="flex flex-col items-center">
+<div class="w-8 h-8 rounded-full bg-surface-container-high text-on-surface-variant flex items-center justify-center font-label-caps text-label-caps mb-2 border border-outline-variant">3</div>
+<span class="font-label-caps text-label-caps text-on-surface-variant tracking-widest uppercase">Review</span>
+</div>
+</div>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-gutter lg:gap-16">
+<!-- Main Checkout Form Area -->
+<div class="lg:col-span-7 xl:col-span-8 flex flex-col gap-12">
+<!-- Shipping Information -->
+<section>
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-8 pb-4 border-b border-outline-variant">Shipping Information</h2>
+<form class="grid grid-cols-1 md:grid-cols-2 gap-x-8 gap-y-8">
+<div class="md:col-span-2">
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase tracking-widest">Email Address</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary px-0 py-2 font-body-md text-on-surface placeholder-on-surface-variant/50 transition-colors" placeholder="your@email.com" type="email"/>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase tracking-widest">First Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary px-0 py-2 font-body-md text-on-surface placeholder-on-surface-variant/50 transition-colors" type="text"/>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase tracking-widest">Last Name</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary px-0 py-2 font-body-md text-on-surface placeholder-on-surface-variant/50 transition-colors" type="text"/>
+</div>
+<div class="md:col-span-2">
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase tracking-widest">Street Address</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary px-0 py-2 font-body-md text-on-surface placeholder-on-surface-variant/50 transition-colors" placeholder="123 Luxury Lane, Apt 4B" type="text"/>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase tracking-widest">City</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary px-0 py-2 font-body-md text-on-surface placeholder-on-surface-variant/50 transition-colors" type="text"/>
+</div>
+<div class="grid grid-cols-2 gap-4">
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase tracking-widest">State</label>
+<select class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary px-0 py-2 font-body-md text-on-surface transition-colors appearance-none">
+<option disabled="" selected="" value="">Select</option>
+<option value="NY">NY</option>
+<option value="CA">CA</option>
+</select>
+</div>
+<div>
+<label class="block font-label-caps text-label-caps text-on-surface-variant mb-2 uppercase tracking-widest">ZIP Code</label>
+<input class="w-full bg-transparent border-0 border-b border-outline-variant focus:ring-0 focus:border-primary px-0 py-2 font-body-md text-on-surface transition-colors" type="text"/>
+</div>
+</div>
+<div class="md:col-span-2 mt-4">
+<label class="flex items-center gap-3 cursor-pointer group">
+<input class="form-checkbox h-5 w-5 text-primary border-outline-variant rounded-sm focus:ring-primary focus:ring-offset-surface bg-transparent transition-all" type="checkbox"/>
+<span class="font-body-md text-on-surface-variant group-hover:text-on-surface transition-colors">Save this information for next time</span>
+</label>
+</div>
+</form>
+</section>
+<!-- Payment Method Selection -->
+<section class="opacity-50 pointer-events-none transition-opacity duration-300" id="payment-section">
+<h2 class="font-headline-sm text-headline-sm text-on-surface mb-8 pb-4 border-b border-outline-variant flex justify-between items-end">
+                         Payment
+                         <span class="font-label-caps text-label-caps text-on-surface-variant uppercase tracking-widest hidden md:block">Step 2 of 3</span>
+</h2>
+<div class="flex flex-col gap-4">
+<!-- Credit Card Option -->
+<label class="relative border border-outline-variant rounded-DEFAULT p-6 flex items-start gap-4 cursor-pointer hover:border-primary transition-colors bg-surface-container-lowest">
+<input class="mt-1 form-radio h-5 w-5 text-primary border-outline-variant focus:ring-primary focus:ring-offset-surface bg-transparent" name="payment_method" type="radio"/>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-2">
+<span class="font-body-lg text-body-lg text-on-surface">Credit Card</span>
+<div class="flex gap-2 text-on-surface-variant">
+<span class="material-symbols-outlined" data-icon="credit_card">credit_card</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Securely pay with Visa, Mastercard, or Amex.</p>
+</div>
+</label>
+<!-- PayPal Option -->
+<label class="relative border border-outline-variant rounded-DEFAULT p-6 flex items-start gap-4 cursor-pointer hover:border-primary transition-colors bg-surface-container-lowest">
+<input class="mt-1 form-radio h-5 w-5 text-primary border-outline-variant focus:ring-primary focus:ring-offset-surface bg-transparent" name="payment_method" type="radio"/>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-2">
+<span class="font-body-lg text-body-lg text-on-surface">PayPal</span>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="account_balance_wallet">account_balance_wallet</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Redirect to PayPal to complete your purchase securely.</p>
+</div>
+</label>
+<!-- Apple Pay Option -->
+<label class="relative border border-outline-variant rounded-DEFAULT p-6 flex items-start gap-4 cursor-pointer hover:border-primary transition-colors bg-surface-container-lowest">
+<input class="mt-1 form-radio h-5 w-5 text-primary border-outline-variant focus:ring-primary focus:ring-offset-surface bg-transparent" name="payment_method" type="radio"/>
+<div class="flex-1">
+<div class="flex justify-between items-center mb-2">
+<span class="font-body-lg text-body-lg text-on-surface">Apple Pay</span>
+<span class="material-symbols-outlined text-on-surface-variant" data-icon="phone_iphone">phone_iphone</span>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant">Fast, secure checkout using Apple Pay.</p>
+</div>
+</label>
+</div>
+</section>
+<div class="mt-8 flex justify-end">
+<button class="bg-on-surface text-surface py-4 px-12 font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary transition-colors duration-300" onclick="document.getElementById('payment-section').classList.remove('opacity-50', 'pointer-events-none')" type="button">Continue to Payment</button>
+</div>
+</div>
+<!-- Order Summary Sidebar -->
+<div class="lg:col-span-5 xl:col-span-4 mt-12 lg:mt-0">
+<div class="bg-surface-container-low p-8 sticky top-28 border border-outline-variant/30 rounded-DEFAULT">
+<h3 class="font-headline-sm text-headline-sm text-on-surface mb-6">Order Summary</h3>
+<!-- Items -->
+<div class="flex flex-col gap-6 mb-8 border-b border-outline-variant/50 pb-8">
+<div class="flex gap-4">
+<div class="w-20 h-24 bg-surface-container-high rounded-sm overflow-hidden flex-shrink-0 relative">
+<img class="w-full h-full object-cover absolute inset-0" data-alt="A minimalist product shot of a luxury face serum in a frosted glass dropper bottle. The background is a soft beige matching the brand palette, illuminated by diffused, high-key lighting that highlights the elegance and premium quality of the skincare product." src="https://lh3.googleusercontent.com/aida-public/AB6AXuAnzSM6aSWQeZZYVOExIjExjVRgUiTigcXBPGAYktUkMsrPgcT5s6aUm2K_Q7iA0jW_O0lFxMZQaxhmE4JBIm1P0fnNXv0fbvk_enTiBIEQqTco5Bduf4kpphVWIj1L9WPLeM6OvoDr2k2EgcJ6MDa1Mi-6vW2v37Rm3UMGgVyhSWcoIfrOidxoBeI-TTnyhW4fiDKppUecdzq7ial97jq8-jA3hLdZ3SLK5OdLaaT9grGmItYioczRnQ"/>
+</div>
+<div class="flex-1 flex flex-col justify-center">
+<h4 class="font-body-md text-body-md text-on-surface mb-1">Luminous Hydration Serum</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mb-2">30ml / 1 oz</p>
+<div class="flex justify-between items-center mt-auto">
+<span class="font-label-caps text-label-caps text-on-surface-variant">QTY 1</span>
+<span class="font-body-md text-body-md text-on-surface">$85.00</span>
+</div>
+</div>
+</div>
+<div class="flex gap-4">
+<div class="w-20 h-24 bg-surface-container-high rounded-sm overflow-hidden flex-shrink-0 relative">
+<img class="w-full h-full object-cover absolute inset-0" data-alt="A minimalist product shot of a luxury rose-tinted lip balm in a sleek, matte black compact. The setting is clean and high-fashion, with generous negative space and a subtle warm tint to the soft lighting, emphasizing a tactile, premium aesthetic." src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6uBPx4HkLzS5geAuXGFIYNdwOp3R6I__BHL-hq-sh0OIGoFc_9lAaYwwO6IWnuIvzKJmaoz5FWDS0wbvz0G7GrO9HJn-8D6H77jAUk6Bxf0DkjPpE4NMCuiwXMNjBuRGn4M03WANq-6mtxld52zP4t9t7c2cfX7EM4dghcLJhxg27YxXhXipPTKjZrGR3kGlkjE3JZAXvOWW0qesjDz8vpBs66WNI-MmFvItqARfldZGZJ586E1f7VA"/>
+</div>
+<div class="flex-1 flex flex-col justify-center">
+<h4 class="font-body-md text-body-md text-on-surface mb-1">Velvet Petal Lip Balm</h4>
+<p class="font-body-md text-body-md text-on-surface-variant text-sm mb-2">Rose Tint</p>
+<div class="flex justify-between items-center mt-auto">
+<span class="font-label-caps text-label-caps text-on-surface-variant">QTY 1</span>
+<span class="font-body-md text-body-md text-on-surface">$32.00</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Totals -->
+<div class="flex flex-col gap-3 font-body-md text-body-md mb-8">
+<div class="flex justify-between text-on-surface-variant">
+<span>Subtotal</span>
+<span>$117.00</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Shipping</span>
+<span>$11.50</span>
+</div>
+<div class="flex justify-between text-on-surface-variant">
+<span>Taxes</span>
+<span>Calculated at next step</span>
+</div>
+</div>
+<div class="flex justify-between items-center font-headline-sm text-headline-sm text-on-surface mb-8 border-t border-outline-variant/50 pt-6">
+<span>Total</span>
+<span>$128.50</span>
+</div>
+<button class="w-full bg-on-surface text-surface py-5 font-label-caps text-label-caps uppercase tracking-widest hover:bg-primary transition-colors duration-300 flex items-center justify-center gap-2 group">
+                        Place Order
+                        <span class="material-symbols-outlined text-sm group-hover:translate-x-1 transition-transform" data-icon="arrow_forward">arrow_forward</span>
+</button>
+<p class="text-center font-body-md text-sm text-on-surface-variant mt-4 px-4">
+                        By placing your order, you agree to our Terms of Service and Privacy Policy.
+                    </p>
+</div>
+</div>
+</div>
+</main>
+<!-- Footer (Suppressed active navigation, structural only) -->
+<footer class="w-full mt-section-gap bg-surface-container-low flex flex-col items-center py-16 px-margin-mobile md:px-margin-desktop">
+<div class="font-headline-sm text-headline-sm mb-4 text-on-surface">GLOW BEAUTY</div>
+<div class="flex flex-wrap justify-center gap-6 mb-8">
+<a class="font-body-md text-body-md text-secondary hover:underline transition-all" href="#">Privacy Policy</a>
+<a class="font-body-md text-body-md text-secondary hover:underline transition-all" href="#">Terms of Service</a>
+<a class="font-body-md text-body-md text-secondary hover:underline transition-all" href="#">Shipping &amp; Returns</a>
+<a class="font-body-md text-body-md text-secondary hover:underline transition-all" href="#">Instagram</a>
+<a class="font-body-md text-body-md text-secondary hover:underline transition-all" href="#">Contact Us</a>
+</div>
+<div class="font-body-md text-body-md text-secondary text-sm">© 2024 GLOW BEAUTY. ALL RIGHTS RESERVED.</div>
+</footer>
+</body></html>

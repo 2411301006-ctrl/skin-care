@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Glow Beauty - Product Details</title>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Bodoni+Moda:ital,opsz,wght@0,6..96,400..900;1,6..96,400..900&amp;family=Manrope:wght@200..800&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "secondary-fixed-dim": "#c9c6c2",
+                        "on-error": "#ffffff",
+                        "on-primary-fixed-variant": "#454747",
+                        "on-primary": "#ffffff",
+                        "surface-container-low": "#f6f3f2",
+                        "on-tertiary": "#ffffff",
+                        "surface-tint": "#5d5f5f",
+                        "on-secondary": "#ffffff",
+                        "on-background": "#1c1b1b",
+                        "surface-bright": "#fcf8f8",
+                        "on-secondary-fixed": "#1c1c19",
+                        "tertiary-container": "#ffffff",
+                        "on-primary-container": "#747676",
+                        "on-tertiary-fixed-variant": "#454747",
+                        "outline": "#747878",
+                        "tertiary-fixed-dim": "#c6c6c7",
+                        "on-tertiary-container": "#747676",
+                        "surface-container-highest": "#e5e2e1",
+                        "surface-container-high": "#ebe7e7",
+                        "surface-dim": "#ddd9d9",
+                        "error": "#ba1a1a",
+                        "on-primary-fixed": "#1a1c1c",
+                        "primary": "#5d5f5f",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#c6c6c7",
+                        "surface-variant": "#e5e2e1",
+                        "inverse-on-surface": "#f4f0ef",
+                        "surface-container": "#f1edec",
+                        "secondary-fixed": "#e5e2dd",
+                        "surface-container-lowest": "#ffffff",
+                        "on-surface-variant": "#444748",
+                        "on-surface": "#1c1b1b",
+                        "surface": "#fcf8f8",
+                        "tertiary-fixed": "#e2e2e2",
+                        "outline-variant": "#c4c7c8",
+                        "on-secondary-fixed-variant": "#474743",
+                        "secondary-container": "#e5e2dd",
+                        "primary-fixed": "#e2e2e2",
+                        "primary-container": "#ffffff",
+                        "secondary": "#5f5e5b",
+                        "background": "#fcf8f8",
+                        "inverse-surface": "#313030",
+                        "primary-fixed-dim": "#c6c6c7",
+                        "on-tertiary-fixed": "#1a1c1c",
+                        "on-secondary-container": "#656461",
+                        "tertiary": "#5d5f5f",
+                        "error-container": "#ffdad6"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.125rem",
+                        "lg": "0.25rem",
+                        "xl": "0.5rem",
+                        "full": "0.75rem"
+                    },
+                    "spacing": {
+                        "gutter": "24px",
+                        "section-gap": "120px",
+                        "margin-mobile": "20px",
+                        "unit": "8px",
+                        "margin-desktop": "64px",
+                        "container-max": "1440px"
+                    },
+                    "fontFamily": {
+                        "headline-md": ["Bodoni Moda"],
+                        "display-lg-mobile": ["Bodoni Moda"],
+                        "body-md": ["Manrope"],
+                        "display-lg": ["Bodoni Moda"],
+                        "body-lg": ["Manrope"],
+                        "label-caps": ["Manrope"],
+                        "headline-sm": ["Bodoni Moda"]
+                    },
+                    "fontSize": {
+                        "headline-md": ["32px", { "lineHeight": "1.3", "letterSpacing": "0.03em", "fontWeight": "400" }],
+                        "display-lg-mobile": ["40px", { "lineHeight": "1.2", "letterSpacing": "0.02em", "fontWeight": "400" }],
+                        "body-md": ["16px", { "lineHeight": "1.5", "fontWeight": "400" }],
+                        "display-lg": ["64px", { "lineHeight": "1.1", "letterSpacing": "0.05em", "fontWeight": "400" }],
+                        "body-lg": ["18px", { "lineHeight": "1.6", "fontWeight": "400" }],
+                        "label-caps": ["12px", { "lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "600" }],
+                        "headline-sm": ["24px", { "lineHeight": "1.4", "fontWeight": "500" }]
+                    }
+                }
+            }
+        }
+    </script>
+<style>
+        .material-symbols-outlined {
+            font-variation-settings: 'FILL' 0, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        .filled-icon {
+            font-variation-settings: 'FILL' 1, 'wght' 300, 'GRAD' 0, 'opsz' 24;
+        }
+        /* Hide scrollbar for horizontal scroll areas but keep functionality */
+        .no-scrollbar::-webkit-scrollbar {
+            display: none;
+        }
+        .no-scrollbar {
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+        }
+        
+        .fade-in {
+            animation: fadeIn 0.5s ease-in-out forwards;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md min-h-screen pt-20">
+<!-- TopAppBar -->
+<header class="fixed top-0 w-full z-50 bg-surface dark:bg-surface-dim border-b border-outline-variant dark:border-outline transition-all duration-300 ease-in-out h-20 flex justify-between items-center px-margin-mobile md:px-margin-desktop">
+<div class="flex items-center gap-4">
+<button aria-label="Menu" class="text-primary dark:text-primary-fixed-dim hover:opacity-70 transition-opacity">
+<span class="material-symbols-outlined" data-icon="menu">menu</span>
+</button>
+</div>
+<div class="font-headline-md text-headline-md tracking-widest text-on-surface dark:text-surface-bright">
+            GLOW BEAUTY
+        </div>
+<div class="flex items-center gap-4">
+<button aria-label="Cart" class="text-primary dark:text-primary-fixed-dim hover:opacity-70 transition-opacity flex items-center gap-2">
+<span class="font-label-caps text-label-caps hidden md:block">Cart</span>
+<span class="material-symbols-outlined" data-icon="shopping_bag">shopping_bag</span>
+</button>
+</div>
+</header>
+<main class="max-w-container-max mx-auto px-margin-mobile md:px-margin-desktop py-gutter fade-in">
+<!-- Breadcrumbs -->
+<nav aria-label="Breadcrumb" class="flex text-on-surface-variant font-label-caps text-label-caps mb-8">
+<ol class="inline-flex items-center space-x-1 md:space-x-2">
+<li class="inline-flex items-center hover:text-primary transition-colors cursor-pointer">
+                    Home
+                </li>
+<li>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[16px] mx-1">chevron_right</span>
+<span class="hover:text-primary transition-colors cursor-pointer">Makeup</span>
+</div>
+</li>
+<li>
+<div class="flex items-center">
+<span class="material-symbols-outlined text-[16px] mx-1">chevron_right</span>
+<span aria-current="page" class="text-primary font-bold">Luminous Silk Foundation</span>
+</div>
+</li>
+</ol>
+</nav>
+<!-- Product Grid -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-16">
+<!-- Gallery (Left Column) -->
+<div class="md:col-span-7 flex flex-col-reverse md:flex-row gap-4 h-[60vh] md:h-[80vh]">
+<!-- Thumbnails -->
+<div class="flex md:flex-col gap-4 overflow-x-auto md:overflow-y-auto no-scrollbar w-full md:w-24 shrink-0 pb-2 md:pb-0">
+<button class="w-20 h-24 md:w-full md:h-32 shrink-0 border-b-2 border-primary bg-surface-container-low transition-opacity hover:opacity-80">
+<div class="bg-cover bg-center w-full h-full" data-alt="Close up of a luxury foundation bottle, minimalist aesthetic, soft beige background, cinematic lighting, editorial style product photography" style="background-image: url('https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg')"></div>
+</button>
+<button class="w-20 h-24 md:w-full md:h-32 shrink-0 border-b-2 border-transparent bg-surface-container-low transition-opacity hover:opacity-80 opacity-60">
+<div class="bg-cover bg-center w-full h-full" data-alt="Foundation smear texture on a marble surface, warm soft light, luxury cosmetics, macro photography, high resolution" style="background-image: url('https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg')"></div>
+</button>
+<button class="w-20 h-24 md:w-full md:h-32 shrink-0 border-b-2 border-transparent bg-surface-container-low transition-opacity hover:opacity-80 opacity-60">
+<div class="bg-cover bg-center w-full h-full" data-alt="Model face close up showing glowing skin with foundation applied, soft natural lighting, high end fashion editorial look" style="background-image: url('https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg')"></div>
+</button>
+<button class="w-20 h-24 md:w-full md:h-32 shrink-0 border-b-2 border-transparent bg-surface-container-low transition-opacity hover:opacity-80 opacity-60 flex items-center justify-center bg-surface-container">
+<span class="material-symbols-outlined text-secondary">play_circle</span>
+</button>
+</div>
+<!-- Main Image -->
+<div class="flex-grow bg-surface-container-low relative group overflow-hidden">
+<div class="bg-cover bg-center w-full h-full transition-transform duration-700 ease-in-out group-hover:scale-105" data-alt="Large detailed hero image of a luxury foundation glass bottle with a black pump, sitting on a clean minimalist beige pedestal, soft studio lighting highlighting the glass texture" style="background-image: url('https://www.gstatic.com/labs-code/stitch/stitch-placeholder-300x300.svg')"></div>
+<!-- Badges -->
+<div class="absolute top-4 left-4 flex gap-2">
+<span class="bg-surface text-on-surface font-label-caps text-label-caps px-3 py-1 shadow-sm">NEW</span>
+<span class="bg-surface text-on-surface font-label-caps text-label-caps px-3 py-1 shadow-sm">BESTSELLER</span>
+</div>
+</div>
+</div>
+<!-- Product Info (Right Column) -->
+<div class="md:col-span-5 flex flex-col pt-4 md:pt-0">
+<div class="mb-6 border-b border-outline-variant pb-6">
+<p class="font-label-caps text-label-caps text-secondary mb-2 tracking-widest">GLOW BEAUTY</p>
+<h1 class="font-headline-md text-headline-md text-on-background mb-4">Luminous Silk Foundation</h1>
+<div class="flex items-center justify-between mb-4">
+<p class="font-body-lg text-body-lg text-on-surface-variant">$64.00</p>
+<div class="flex items-center gap-2">
+<div class="flex text-primary">
+<span class="material-symbols-outlined filled-icon text-[18px]">star</span>
+<span class="material-symbols-outlined filled-icon text-[18px]">star</span>
+<span class="material-symbols-outlined filled-icon text-[18px]">star</span>
+<span class="material-symbols-outlined filled-icon text-[18px]">star</span>
+<span class="material-symbols-outlined text-[18px]">star_half</span>
+</div>
+<span class="font-body-md text-body-md text-on-surface-variant underline cursor-pointer hover:text-primary transition-colors">4.8 (124 Reviews)</span>
+</div>
+</div>
+<p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">
+                        An award-winning, oil-free foundation that delivers buildable, medium coverage and a luminous, glowing-skin finish for a naturally flawless makeup look.
+                    </p>
+</div>
+<!-- Shade Selector -->
+<div class="mb-8">
+<div class="flex justify-between items-center mb-4">
+<p class="font-label-caps text-label-caps text-on-background">SHADE: <span class="font-body-md text-body-md text-on-surface-variant ml-2">4.25 - Light with neutral peachy undertone</span></p>
+<button class="font-label-caps text-label-caps text-secondary underline hover:text-primary transition-colors">Find Your Shade</button>
+</div>
+<div class="flex flex-wrap gap-3">
+<!-- Swatches -->
+<button aria-label="Shade 1" class="w-8 h-8 rounded-full bg-[#f3e5db] border-2 border-transparent hover:border-outline-variant transition-colors"></button>
+<button aria-label="Shade 2" class="w-8 h-8 rounded-full bg-[#ebd6c5] border-2 border-transparent hover:border-outline-variant transition-colors"></button>
+<button aria-label="Shade 3 (Selected)" class="w-8 h-8 rounded-full bg-[#e3c6b2] border-2 border-outline transition-colors relative">
+<span class="absolute inset-0 border border-background rounded-full m-[2px]"></span>
+</button>
+<button aria-label="Shade 4" class="w-8 h-8 rounded-full bg-[#d6b298] border-2 border-transparent hover:border-outline-variant transition-colors"></button>
+<button aria-label="Shade 5" class="w-8 h-8 rounded-full bg-[#c99b7e] border-2 border-transparent hover:border-outline-variant transition-colors"></button>
+<button aria-label="Shade 6" class="w-8 h-8 rounded-full bg-[#b88565] border-2 border-transparent hover:border-outline-variant transition-colors"></button>
+<button aria-label="Shade 7" class="w-8 h-8 rounded-full bg-[#a36f4d] border-2 border-transparent hover:border-outline-variant transition-colors"></button>
+<button aria-label="Shade 8" class="w-8 h-8 rounded-full bg-[#8c5a3b] border-2 border-transparent hover:border-outline-variant transition-colors"></button>
+</div>
+</div>
+<!-- Actions -->
+<div class="flex flex-col gap-4 mb-10">
+<div class="flex gap-4 h-14">
+<!-- Quantity -->
+<div class="flex border border-outline-variant w-1/3">
+<button aria-label="Decrease quantity" class="px-4 text-on-surface-variant hover:bg-surface-container-low transition-colors">-</button>
+<input aria-label="Quantity" class="w-full text-center border-none focus:ring-0 font-body-md text-body-md bg-transparent p-0" min="1" type="number" value="1"/>
+<button aria-label="Increase quantity" class="px-4 text-on-surface-variant hover:bg-surface-container-low transition-colors">+</button>
+</div>
+<!-- Add to Cart -->
+<button class="flex-grow bg-on-background text-on-primary font-label-caps text-label-caps hover:bg-primary transition-colors flex items-center justify-center gap-2">
+<span>ADD TO CART</span>
+<span class="font-body-md text-body-md font-normal opacity-70 border-l border-on-primary/30 pl-2 ml-2"> $64.00</span>
+</button>
+<!-- Wishlist -->
+<button aria-label="Add to Wishlist" class="w-14 border border-outline-variant flex items-center justify-center hover:bg-surface-container-low transition-colors text-on-surface-variant">
+<span class="material-symbols-outlined">favorite</span>
+</button>
+</div>
+</div>
+<!-- Accordion Tabs -->
+<div class="border-t border-outline-variant">
+<div class="border-b border-outline-variant">
+<button class="w-full py-4 flex justify-between items-center text-left hover:opacity-70 transition-opacity" onclick="toggleAccordion('desc')">
+<span class="font-label-caps text-label-caps text-on-background">DESCRIPTION</span>
+<span class="material-symbols-outlined text-secondary transition-transform duration-300" id="icon-desc">remove</span>
+</button>
+<div class="pb-4 font-body-md text-body-md text-on-surface-variant text-sm pr-8 transition-all duration-300 overflow-hidden" id="content-desc" style="max-height: 500px; opacity: 1;">
+                            Formulated with Micro-fil™ technology, this foundation sculpts and brightens the complexion, blurs imperfections, and provides a radiant, second-skin finish. It’s a makeup artist favorite for its weightless feel and seamless blendability.
+                            <ul class="mt-4 space-y-2">
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-[#c9b18f] mt-1">check_circle</span>
+<span>Medium, buildable coverage</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-[#c9b18f] mt-1">check_circle</span>
+<span>Radiant, luminous finish</span>
+</li>
+<li class="flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-[#c9b18f] mt-1">check_circle</span>
+<span>Suitable for all skin types</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-b border-outline-variant">
+<button class="w-full py-4 flex justify-between items-center text-left hover:opacity-70 transition-opacity" onclick="toggleAccordion('ingredients')">
+<span class="font-label-caps text-label-caps text-on-background">INGREDIENTS</span>
+</button></div></div></div></div></main></body></html>
